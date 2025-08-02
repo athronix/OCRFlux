@@ -8,6 +8,7 @@ from argparse import Namespace
 from urllib.parse import urlparse
 
 from PIL import Image
+from sphinx import ret
 from pypdf import PdfReader
 
 from ocrflux.image_utils import get_page_image
@@ -338,6 +339,7 @@ async def request(args, file_path: str):
         return None
 
 if __name__ == "__main__":
+    
     args = Namespace(
         model="ChatDOC/OCRFlux-3B",
         skip_cross_page_merge=False,
